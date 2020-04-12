@@ -1,0 +1,20 @@
+schema {
+  query: InternalQuery
+  mutation: InternalMutation
+}
+
+directive @cost(
+  complexity: Int! = 1
+  multipliers: [MultiplierPath!]
+) on FIELD_DEFINITION
+
+type InternalMutation {
+  setCount(value: Int!): Int!
+}
+
+type InternalQuery {
+  count: Int!
+}
+
+scalar MultiplierPath
+

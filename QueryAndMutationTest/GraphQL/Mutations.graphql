@@ -1,0 +1,3 @@
+﻿mutation SetCount($count: Int!) {
+	setCount(value: $count)
+}
